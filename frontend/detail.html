@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mess Detail — MealForMe</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">Meal<span>ForMe</span></a>
+    <div class="navbar__links">
+      <span id="nav-user" class="nav-link hidden" style="font-weight:600;color:var(--accent)"></span>
+      <a href="login.html"    id="nav-login"    class="nav-link btn btn--secondary">Login</a>
+      <a href="register.html" id="nav-register" class="nav-link btn btn--primary">Sign Up</a>
+      <button id="nav-logout" class="nav-link btn btn--secondary hidden">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Detail Header (rendered by JS) ── -->
+<div id="detail-header-wrap"></div>
+
+<!-- ── Main Content ── -->
+<main class="section">
+  <div class="container">
+    <div id="detail-body">
+      <!-- Rating breakdown + review form + reviews rendered by JS -->
+      <div class="state-msg">
+        <div class="icon">⏳</div>
+        <p>Loading mess details…</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <p>© 2025 MealForMe · Built with ❤️ for hungry people</p>
+  </div>
+</footer>
+
+<!-- ── Toast ── -->
+<div id="toast"></div>
+
+<script type="module" src="js/detail.js"></script>
+</body>
+</html>

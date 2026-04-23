@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MealForMe — Find Your Perfect Mess</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">Meal<span>ForMe</span></a>
+    <div class="navbar__links">
+      <span id="nav-user" class="nav-link hidden" style="font-weight:600;color:var(--accent)"></span>
+      <a href="login.html"    id="nav-login"    class="nav-link btn btn--secondary">Login</a>
+      <a href="register.html" id="nav-register" class="nav-link btn btn--primary">Sign Up</a>
+      <button id="nav-logout" class="nav-link btn btn--secondary hidden">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="container hero__content">
+    <p class="hero__eyebrow">🍽️ Discover Mess Services Near You</p>
+    <h1>Find your <em>perfect</em><br>daily meal.</h1>
+    <p class="hero__sub">Browse verified mess services, read honest reviews, and never settle for a bad meal again.</p>
+  </div>
+</section>
+
+<!-- ── Filter Bar ── -->
+<div class="container">
+  <div class="filter-bar">
+    <div class="filter-bar__group">
+      <label for="filter-type">Meal Type</label>
+      <select id="filter-type">
+        <option value="">All Types</option>
+        <option value="veg">🥦 Veg</option>
+        <option value="nonveg">🍗 Non-Veg</option>
+        <option value="jain">🌸 Jain</option>
+      </select>
+    </div>
+    <div class="filter-bar__group">
+      <label for="filter-area">Area</label>
+      <input id="filter-area" type="text" placeholder="e.g. Baner, Kharadi" />
+    </div>
+    <div class="filter-bar__group">
+      <label for="filter-price">Max Price (₹/month)</label>
+      <input id="filter-price" type="number" placeholder="e.g. 3000" min="0" />
+    </div>
+    <div class="filter-bar__group">
+      <label for="filter-sort">Sort By</label>
+      <select id="filter-sort">
+        <option value="rating">⭐ Top Rated</option>
+        <option value="price_asc">₹ Price: Low to High</option>
+        <option value="price_desc">₹ Price: High to Low</option>
+        <option value="distance">📍 Distance</option>
+      </select>
+    </div>
+    <div class="filter-bar__group" style="max-width:120px">
+      <label>&nbsp;</label>
+      <button id="btn-filter" class="btn btn--primary" style="width:100%;justify-content:center">Search</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Mess Listing ── -->
+<main class="section">
+  <div class="container">
+    <div class="section__header">
+      <h2>Available Messes</h2>
+      <span id="mess-count" class="section__count"></span>
+    </div>
+
+    <!-- Cards rendered by JS -->
+    <div class="mess-grid" id="mess-grid">
+      <!-- skeleton on load -->
+    </div>
+
+    <div id="mess-empty" class="state-msg" style="display:none">
+      <div class="icon">🔍</div>
+      <p>No messes found matching your filters.</p>
+    </div>
+  </div>
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <p>© 2025 MealForMe · Built with ❤️ for hungry people</p>
+  </div>
+</footer>
+
+<!-- ── Toast ── -->
+<div id="toast"></div>
+
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

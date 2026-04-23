@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — MealForMe</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">Meal<span>ForMe</span></a>
+    <div class="navbar__links">
+      <a href="register.html" class="nav-link">Don't have an account? <strong>Sign Up →</strong></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Login Form ── -->
+<div class="auth-page page">
+  <div class="auth-card">
+    <div class="auth-card__header">
+      <div style="font-size:2.4rem;margin-bottom:8px">🍽️</div>
+      <h2>Welcome back</h2>
+      <p>Log in to find and review mess services</p>
+    </div>
+
+    <div id="login-alert" class="alert"></div>
+
+    <div id="login-form">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input class="form-control" type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" id="password" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+
+      <button id="btn-login" class="btn btn--primary btn--block" style="margin-top:8px">
+        Log In
+      </button>
+    </div>
+
+    <div class="auth-card__footer">
+      New here? <a href="register.html">Create an account</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Toast ── -->
+<div id="toast"></div>
+
+<script type="module" src="js/login.js"></script>
+</body>
+</html>
