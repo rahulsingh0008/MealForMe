@@ -213,10 +213,10 @@ function getStarValue(name) {
   return checked ? parseInt(checked.value) : 0;
 }
 
-function showAlert(el, msg, type = 'error') {
-  el.textContent = msg;
-  el.className = `alert alert--${type} show`;
-}
+// function showAlert(el, msg, type = 'error') {
+//   el.textContent = msg;
+//   el.className = `alert alert--${type} show`;
+// }
 
 // ── Render reviews list ───────────────────
 function renderReviews(reviews) {
